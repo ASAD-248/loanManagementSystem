@@ -1,7 +1,7 @@
 // NODE MODULES...
 import { createRoot } from 'react-dom/client';
 import { RouterProvider } from 'react-router';
-import { HelmetProvider } from 'react-helmet-async';
+
 
 // CSS LINKS
 import './index.css';
@@ -18,7 +18,6 @@ import { LoanContextProvider } from './contexts/LoanContext';
 
 createRoot(document.getElementById('root')).render(
   <AuthContextProvider>
-    <HelmetProvider>
       <LoanContextProvider>
         <ToggleContextProvider>
           <RouterProvider router={router} />
@@ -28,6 +27,5 @@ createRoot(document.getElementById('root')).render(
           />
         </ToggleContextProvider>
       </LoanContextProvider>
-    </HelmetProvider>
   </AuthContextProvider>,
 );
